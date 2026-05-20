@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {FormGroup, FormControl, ReactiveFormsModule, Validators} from '@angular/forms';
+import { LoginForm } from '../../models/login';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +10,8 @@ import {FormGroup, FormControl, ReactiveFormsModule, Validators} from '@angular/
   styleUrl: './login.css',
 })
 export class Login {
+  constructor(private router: Router) {}
+
   loginForm = new FormGroup({
     userName: new FormControl('', Validators.required),
     
@@ -18,7 +22,15 @@ export class Login {
   });
 
   onSubmit() {
-        console.warn(this.loginForm.value);
-        alert("Welcome " + this.loginForm.value.userName);
+    const loginData: LoginForm = {
+      userName: this.loginForm.value.userName ?? '',
+      password: this.loginForm.value.password ?? ''
+    };
+
+    if(loginData.userName === 'admin' && loginData.password === 'password123') {
+      this.router.navigate(['/dashboard'])
+    } else {
+      alert('Wrong username or password, please try again.')
+    }
   }
 }
