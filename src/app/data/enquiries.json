@@ -1,0 +1,31 @@
+{
+    "enquiries" : [
+        {
+            "customerName" : "Edan Read",
+            "destination" : "Birmingham",
+            "status" : "Quoted",
+            "budget" : 200,
+            "nights" : 1,
+            "travelDate" : "20-05-2026",
+            "imageURL" : "https://media-cdn.tripadvisor.com/media/photo-s/11/43/7f/ae/getlstd-property-photo.jpg"
+        },
+        {
+            "customerName" : "Morgan Harper",
+            "destination" : "Mediterranean",
+            "status" : "Booked",
+            "budget" : 500,
+            "nights" : 14,
+            "travelDate" : "21-05-2026",
+            "imageURL" : "https://www.cruisemummy.co.uk/wp-content/uploads/marella-discovery-1.jpg"
+        },
+        {
+            "customerName" : "Eloise Allen",
+            "destination" : "Venice",
+            "status" : "Contacted",
+            "budget" : 1600,
+            "nights" : 7,
+            "travelDate" : "21-05-2026",
+            "imageURL" : "https://bonjourvenise.fr/wp-content/uploads/2024/02/v2-7w35e-2cq7d.jpg"
+        }
+    ]
+}
