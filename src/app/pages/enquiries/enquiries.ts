@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { EnquiryCard } from "../../components/enquiry-card/enquiry-card";
 
 @Component({
   selector: 'app-enquiries',
-  imports: [],
+  imports: [EnquiryCard],
   templateUrl: './enquiries.html',
   styleUrl: './enquiries.css',
 })
