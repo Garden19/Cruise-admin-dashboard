@@ -26,6 +26,24 @@
             "nights" : 7,
             "travelDate" : "21-05-2026",
             "imageURL" : "https://bonjourvenise.fr/wp-content/uploads/2024/02/v2-7w35e-2cq7d.jpg"
+        },
+        {
+            "customerName" : "Georgina Midgley",
+            "destination" : "Chile",
+            "status" : "Cancelled",
+            "budget" : 1900,
+            "nights" : 6,
+            "travelDate" : "22-05-2026",
+            "imageURL" : "https://cruiseweb.com/_next/image?url=%2Fapi%2Fmedia%2Ffile%2Fviking-octantis-expeditation-cruise-ship-exterior.jpg&w=1920&q=50"
+        },
+        {
+            "customerName" : "Lou Allen",
+            "destination" : "Southampton",
+            "status" : "Booked",
+            "budget" : 3500,
+            "nights" : 14,
+            "travelDate" : "22-05-2026",
+            "imageURL" : "https://www.cruisebritain.org/wp-content/uploads/2015/11/southampton-port01.jpg"
         }
     ]
 }
