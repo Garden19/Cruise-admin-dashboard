@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { EnquiryCard } from "../../components/enquiry-card/enquiry-card";
-
+import data from '../../data/enquiries.json';
+import { EnquiryCard } from '../../components/enquiry-card/enquiry-card';
 @Component({
   selector: 'app-enquiries',
   imports: [EnquiryCard],
@@ -8,5 +8,5 @@ import { EnquiryCard } from "../../components/enquiry-card/enquiry-card";
   styleUrl: './enquiries.css',
 })
 export class Enquiries {
-
+    enquiries = data.enquiries;
 }

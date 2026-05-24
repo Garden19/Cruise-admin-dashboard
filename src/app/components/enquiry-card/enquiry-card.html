@@ -1,35 +1,35 @@
-<div class="card-container">
-    @for (enquiry of enquiries; track $index) {
-        <div class="card">
-            <div class="card-content">
-                <img [src]="enquiry.imageURL" alt="Image of the cruise the customer has chosen.">
-                <div class="customer-information">
-                    <div class="data-group">
-                        <h2>Customer name</h2>
-                        <p>{{enquiry.customerName}}</p>
-                    </div>
-                    <div class="data-group">
-                        <h2>Destination</h2>
-                        <p>{{enquiry.destination}}</p>
-                    </div>
-                    <div class="data-group">
-                        <h2>Status</h2>
-                        <p>{{enquiry.status}}</p>
-                    </div>
-                    <div class="data-group">
-                        <h2>Customer budget</h2>
-                        <p>£{{enquiry.budget}}</p>
-                    </div>
-                    <div class="data-group">
-                        <h2>Stay (Nights)</h2>
-                        <p>{{enquiry.nights}}</p>
-                    </div>
-                    <div class="data-group">
-                        <h2>Date to travel</h2>
-                        <p>{{enquiry.travelDate}}</p>
-                    </div>
+<div class="card">
+    <div class="card-content">
+        <img src="{{enquiry.imageURL}}" alt="Image of the cruise to {{enquiry.destination}}">
+        <div class="customer-information">
+            <div class="group">
+                <div class="data-group">
+                    <h2>Customer name</h2>
+                    <p>{{enquiry.customerName}}</p>
+                </div>
+                <div class="data-group">
+                    <h2>Destination</h2>
+                    <p>{{ enquiry.destination }}</p>
+                </div>
+                <div class="data-group">
+                    <h2>Status</h2>
+                    <p>{{ enquiry.status }}</p>
+                </div>
+            </div>    
+            <div class="group">
+                <div class="data-group">
+                    <h2>Customer budget</h2>
+                    <p>{{ enquiry.budget }}</p>
+                </div>
+                <div class="data-group">
+                    <h2>Stay (Nights)</h2>
+                    <p>{{ enquiry.nights }}</p>
+                </div>
+                <div class="data-group">
+                    <h2>Date to travel</h2>
+                    <p>{{ enquiry.travelDate }}</p>
                 </div>
             </div>
         </div>
-    }
+    </div>
 </div>

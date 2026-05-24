@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import data from '../../data/enquiries.json';
+import { Component, Input } from '@angular/core';
+import { NewEnquiry } from '../../models/newEnquiry';
+
 @Component({
   selector: 'app-enquiry-card',
   imports: [],
@@ -8,6 +9,5 @@ import data from '../../data/enquiries.json';
 })
 
 export class EnquiryCard {
-  enquiries = data.enquiries;
-  
+    @Input() enquiry!: NewEnquiry;
 }
