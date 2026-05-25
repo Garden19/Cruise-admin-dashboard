@@ -44,6 +44,15 @@
             "nights" : 14,
             "travelDate" : "22-05-2026",
             "imageURL" : "https://www.cruisebritain.org/wp-content/uploads/2015/11/southampton-port01.jpg"
+        },
+        {
+            "customerName" : "Cameron Allen",
+            "destination" : "Chile",
+            "status" : "Booked",
+            "budget" : 4000,
+            "nights" : 14,
+            "travelDate" : "25-05-2026",
+            "imageURL" : "https://i.pinimg.com/originals/47/1b/7c/471b7c070696482de1e64466bee69dda.jpg"
         }
     ]
 }
