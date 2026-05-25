@@ -24,3 +24,15 @@ p {
 .data-group {
     margin: 5px 0px;
 }
+
+@media (320px <= width <= 425px) {
+    .card {
+        width: 300px;
+    }
+    h2 {
+        font-size: 1em;
+    }
+    p {
+        font-size: 0.7em;
+    }
+}
