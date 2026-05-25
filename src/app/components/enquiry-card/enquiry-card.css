@@ -1,8 +1,9 @@
 .card {
-    background: purple;
+    background: #0077B6;
     width: 340px;
     border-radius: 7px;
-    margin-bottom: 20px;
+    margin: 20px;
+    overflow: hidden;
 }
 
 .customer-information {
@@ -23,6 +24,13 @@ p {
 
 .data-group {
     margin: 5px 0px;
+}
+
+img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
 }
 
 @media (320px <= width <= 425px) {
