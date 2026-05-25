@@ -2,7 +2,7 @@
     background: #0077B6;
     width: 340px;
     border-radius: 7px;
-    margin: 20px;
+    margin: 10px;
     overflow: hidden;
 }
 
@@ -35,7 +35,8 @@ img {
 
 @media (320px <= width <= 425px) {
     .card {
-        width: 300px;
+        width: 280px;
+        height: 260px;
     }
     h2 {
         font-size: 1em;

@@ -1,4 +1,23 @@
-<nav>
+<nav id="small">
+    <h1>CruiseDashboard</h1>
+    <button class="menu-btn" (click)="isMenuOpen = !isMenuOpen">☰</button>
+    <div class="nav-links" [class.open]="isMenuOpen">
+        <button routerLink="/dashboard" (click)="isMenuOpen = false">Dashboard</button>
+        <button routerLink="/enquiries" (click)="isMenuOpen = false">Enquiries</button>
+        <button routerLink="/addEnquiry" (click)="isMenuOpen = false">Add Enquiry</button>
+        <button routerLink="/editEnquiry" (click)="isMenuOpen = false">Edit Enquiry</button>
+    </div>
+</nav>
+
+<nav id="medium">
+    <button routerLink="/dashboard">Dashboard</button>
+    <button routerLink="/enquiries">Enquiries</button>
+    <h1>CruiseDashboard</h1>
+    <button routerLink="/addEnquiry">Add Enquiry</button>
+    <button routerLink="/editEnquiry">Edit Enquiry</button>
+</nav>
+
+<nav id="large">
     <button routerLink="/dashboard">Dashboard</button>
     <button routerLink="/enquiries">Enquiries</button>
     <h1>CruiseDashboard</h1>
