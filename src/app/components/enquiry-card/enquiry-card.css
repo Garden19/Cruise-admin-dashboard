@@ -33,6 +33,15 @@ img {
     display: block;
 }
 
+.booked {
+    color: white;
+    text-decoration: underline;
+}
+.cancelled {
+    color: red;
+    text-decoration: line-through;
+}
+
 @media (320px <= width <= 425px) {
     .card {
         width: 280px;
