@@ -1,40 +1,42 @@
-<form [formGroup]="addEnquiry" (ngSubmit)="onAddEnquiry()">
-    <div>
-        <label for="customerName">Customer name</label>
-        <input type="text" formControlName="customerName" placeholder="Enter the customers name" required>
-    </div>
-    <div>
-        <label for="destination">Destination</label>
-        <input type="text" formControlName="destination" placeholder="Enter the cruise destination" required>
-    </div>
-    <div>
-        <label for="status">Status</label>
-        <select formControlName="status" required>
-            <option value="booked">Booked</option>
-            <option value="cancelled">Cancelled</option>
-            <option value="contacted">Contacted</option>
-            <option value="quoted">Quoted</option>
-        </select>
-    </div>
-    <div>
-        <label for="budget">Budget</label>
-        <input type="number" formControlName="budget" required>
-    </div>
-    <div>
-        <label for="nights">Nights</label>
-        <input type="number" formControlName="nights" required>
-    </div>
-    <div>
-        <label for="travelDate">Travel date</label>
-        <input type="text" formControlName="travelDate" required>
-    </div>
-    <div>
-        <label for="imageURL">Image URL</label>
-        <input type="text" formControlName="imageURL" required>
-    </div>
-    <div>
-        <button type="submit" [disabled]="!addEnquiry.valid">
-            Add enquiry
-        </button>
-    </div>
-</form>
+<div class="container">
+    <form [formGroup]="addEnquiry" class="add-enquiry" (ngSubmit)="onAddEnquiry()">
+        <div>
+            <label for="customerName">Customer name</label>
+            <input type="text" formControlName="customerName" placeholder="Enter the customers name" required>
+        </div>
+        <div>
+            <label for="destination">Destination</label>
+            <input type="text" formControlName="destination" placeholder="Enter the cruise destination" required>
+        </div>
+        <div>
+            <label for="status">Status</label>
+            <select formControlName="status" required>
+                <option value="booked">Booked</option>
+                <option value="cancelled">Cancelled</option>
+                <option value="contacted">Contacted</option>
+                <option value="quoted">Quoted</option>
+            </select>
+        </div>
+        <div>
+            <label for="budget">Budget</label>
+            <input type="number" formControlName="budget" required>
+        </div>
+        <div>
+            <label for="nights">Nights</label>
+            <input type="number" formControlName="nights" required>
+        </div>
+        <div>
+            <label for="travelDate">Travel date</label>
+            <input type="text" formControlName="travelDate" required>
+        </div>
+        <div>
+            <label for="imageURL">Image URL</label>
+            <input type="text" formControlName="imageURL" required>
+        </div>
+        <div>
+            <button type="submit" [disabled]="!addEnquiry.valid">
+                Add enquiry
+            </button>
+        </div>
+    </form>
+</div>
