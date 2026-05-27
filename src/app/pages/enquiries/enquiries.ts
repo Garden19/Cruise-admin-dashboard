@@ -10,7 +10,7 @@ import { NewEnquiry } from '../../models/newEnquiry';
   styleUrl: './enquiries.css',
 })
 export class Enquiries {
-  private enquiries: NewEnquiry[] = [];
+  enquiries: NewEnquiry[] = [];
   
   getEnquiries(): NewEnquiry[] {
     return this.enquiries

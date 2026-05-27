@@ -1,5 +1,3 @@
-<div class="card-container">
-    @for (enquiry of enquiries; track $index) {
-        <app-enquiry-card [enquiry]="enquiry"></app-enquiry-card>
-    }
-</div>
+@for (enquiry of enquiries; track $index) {
+  <app-enquiry-card [enquiry]="enquiry"></app-enquiry-card>
+}
