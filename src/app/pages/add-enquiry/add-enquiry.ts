@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from "@angular/forms";
 import { NewEnquiry } from '../../models/newEnquiry';
 import { EnquiryService } from '../../services/enquiry-service';
@@ -11,8 +12,10 @@ import { EnquiryService } from '../../services/enquiry-service';
 })
 export class AddEnquiry {
 
-  constructor(private enquiryService: EnquiryService){
-  }
+  constructor(
+    private enquiryService: EnquiryService,
+    private router: Router
+  ){}
 
   addEnquiry = new FormGroup({
     customerName: new FormControl('', Validators.required),
@@ -39,5 +42,6 @@ export class AddEnquiry {
       imageURL: this.addEnquiry.value.imageURL ?? ''
   }
       this.enquiryService.addEnquiry(newEnquiry);
+      this.router.navigate(['/enquiries']);
   }
 }
