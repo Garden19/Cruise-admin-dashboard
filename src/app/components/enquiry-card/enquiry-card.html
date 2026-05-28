@@ -1,6 +1,9 @@
 <div class="card">
     <div class="card-content">
-        <img src="{{enquiry.imageURL}}" alt="Image of the cruise to {{enquiry.destination}}">
+        <div class="img-wrapper">            
+            <button id="remove-btn" (click)="removeEnquiry()">Click to remove</button>
+            <img src="{{enquiry.imageURL}}" alt="Image of the cruise to {{enquiry.destination}}">
+        </div>
         <div class="customer-information">
             <div class="group">
                 <div class="data-group">
