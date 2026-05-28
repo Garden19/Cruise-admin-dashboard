@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { NewEnquiry } from '../../models/newEnquiry';
+import { EnquiryService } from '../../services/enquiry-service';
 
 @Component({
   selector: 'app-enquiry-card',
@@ -9,5 +10,14 @@ import { NewEnquiry } from '../../models/newEnquiry';
 })
 
 export class EnquiryCard {
-    @Input() enquiry!: NewEnquiry;
+
+  constructor(private enquiryService: EnquiryService){
+
+  }
+
+  @Input() enquiry!: NewEnquiry;
+  
+  removeEnquiry(){
+    this.enquiryService.removeEnquiry(this.enquiry);
+  }
 }
