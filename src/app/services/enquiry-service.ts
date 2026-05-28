@@ -1,20 +1,30 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { NewEnquiry } from '../models/newEnquiry';
-import data from '../data/enquiries.json'
+import data from '../data/enquiries.json';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EnquiryService {
+  private enquiriesSubject = new BehaviorSubject<NewEnquiry[]>(data.enquiries);
 
-  private enquiries: NewEnquiry[] = data.enquiries;
-
-  getEnquiries(): NewEnquiry[] {
-    return this.enquiries;
-  }
+  enquiries$ = this.enquiriesSubject.asObservable();
 
   addEnquiry(enquiry: NewEnquiry): void {
-    this.enquiries.push(enquiry);
+    const currentEnquiries = this.enquiriesSubject.value;
+    const updatedEnquiries = [...currentEnquiries, enquiry];
+
+    this.enquiriesSubject.next(updatedEnquiries);
   }
 
+  removeEnquiry(enquiryToRemove: NewEnquiry): void {
+    const currentEnquiries = this.enquiriesSubject.value;
+
+    const updatedEnquiries = currentEnquiries.filter((enquiry) => {
+      return enquiry !== enquiryToRemove;
+    });
+
+    this.enquiriesSubject.next(updatedEnquiries);
+  }
 }
