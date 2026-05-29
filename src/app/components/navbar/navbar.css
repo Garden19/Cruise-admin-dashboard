@@ -31,6 +31,7 @@ nav {
     background-color: #F7F7F2;
     flex-direction: column;
     border-radius: 0px 0px 22px 22px;
+    z-index: 1;
 }
 .nav-links.open {
     display: flex;
