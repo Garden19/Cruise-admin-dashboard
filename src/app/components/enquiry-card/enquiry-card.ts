@@ -15,9 +15,26 @@ export class EnquiryCard {
 
   }
 
+  isEditing = false;
+  selectedStatus = '';
+
   @Input() enquiry!: NewEnquiry;
   
   removeEnquiry(){
     this.enquiryService.removeEnquiry(this.enquiry);
+  }
+
+  startEditing(){
+    this.isEditing = true;
+  }
+
+  statusChanged(event: Event){
+    const select = event.target as HTMLSelectElement;
+    this.selectedStatus = select.value;
+  }
+
+  saveStatus(){
+    this.enquiryService.updateStatus(this.enquiry, this.selectedStatus);
+    this.isEditing = false;
   }
 }

@@ -15,13 +15,30 @@
                     <p>{{ enquiry.destination }}</p>
                 </div>
                 <div class="data-group">
-                    <h2>Status</h2>
-                    <p
-                        [class.booked]="enquiry.status == 'Booked'"
-                        [class.cancelled]="enquiry.status == 'Cancelled'"
-                        >
-                        {{ enquiry.status }}
-                    </p>
+                    <div class="statusEdit">
+                        <div class="divider">
+                            <h2>Status</h2>
+                            @if(!isEditing) {
+                            <button (click)="startEditing()" id="edit-btn">Edit</button>
+                            }
+    
+                        </div>
+                        <p [class.booked]="enquiry.status == 'Booked'" [class.cancelled]="enquiry.status == 'Cancelled'" [class.hidden]="isEditing == true">
+                            {{ enquiry.status }}
+                        </p>
+                        @if (isEditing) {
+                            <div class="saveEdit">
+                                <select formControlName="status" required (change)="statusChanged($event)">
+                                    <option value="" disabled selected>Select status</option>
+                                    <option value="Booked">Booked</option>
+                                    <option value="Cancelled">Cancelled</option>
+                                    <option value="Contacted">Contacted</option>
+                                    <option value="Quoted">Quoted</option>
+                                </select>
+                                <button (click)="saveStatus()">Save</button>
+                            </div>
+                        } 
+                    </div>
                 </div>
             </div>    
             <div class="group">
@@ -39,5 +56,4 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>

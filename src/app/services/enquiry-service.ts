@@ -27,4 +27,17 @@ export class EnquiryService {
 
     this.enquiriesSubject.next(updatedEnquiries);
   }
+
+  updateStatus(enquiryToUpdate: NewEnquiry, newStatus: string): void {
+    const currentEnquiries = this.enquiriesSubject.value;
+
+    const updatedEnquiries = currentEnquiries.map((enquiry) => {
+      if (enquiry === enquiryToUpdate) {
+        return { ...enquiry, status: newStatus };
+      }
+      return enquiry;
+    });
+
+    this.enquiriesSubject.next(updatedEnquiries);
+  }
 }
