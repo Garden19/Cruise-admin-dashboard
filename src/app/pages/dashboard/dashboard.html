@@ -1,1 +1,13 @@
-<p>dashboard works!</p>
+<div class="travelUpdates">
+    <h1>Latest travel updates</h1>
+    <div class="postContainer">
+        @for (post of travelUpdates; track $index) {
+        <div class="post">
+            <div class="title">{{post.title}}</div>
+            <section>
+                <p>{{post.body}}</p>
+            </section>
+        </div>
+    }
+    </div>
+</div>

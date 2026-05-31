@@ -1,0 +1,37 @@
+.travelUpdates {
+    margin: 10px 10px;
+    border-radius: 7px;
+    background-color: #0077B6;
+    padding: 10px;
+}
+
+.postContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.post {
+    height: stretch;
+    width: 300px;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: #005a8b;
+    color: white;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: 1px 1px black;
+}
+
+section {
+    max-height: max-content;
+}
