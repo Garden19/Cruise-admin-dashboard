@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from "@angular/forms";
 import { NewEnquiry } from '../../models/newEnquiry';
-import { EnquiryService } from '../../services/enquiry-service';
+import { EnquiryService } from '../../services/EnquiryService/enquiry-service';
 
 @Component({
   selector: 'app-add-enquiry',

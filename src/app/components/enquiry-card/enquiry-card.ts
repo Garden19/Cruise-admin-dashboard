@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { NewEnquiry } from '../../models/newEnquiry';
-import { EnquiryService } from '../../services/enquiry-service';
+import { EnquiryService } from '../../services/EnquiryService/enquiry-service';
 
 @Component({
   selector: 'app-enquiry-card',
